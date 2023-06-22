@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <title>Pereste Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo" id="logo">
+</head>
+<body>
+    <div id="chat-container">
+        <h1>Assistant</h1>
+        <div id="user-input">
+            <form method="POST">
+                <input type="text" name="user_message" required placeholder="Ask your question...">
+                <button type="submit">Send</button>
+            </form>
+        </div>
+        {% if assistant_message %}
+        <div id="assistant-response">
+            <p>Response: {{ assistant_message }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
