@@ -3,7 +3,7 @@ import openai
 
 app = Flask(__name__)
 
-openai.api_key =  "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"
+openai.api_key =  "enter key"
 
 messages = [{"role": "system", "content": "You are a kind helpful assistant."}]
 
